@@ -1,0 +1,51 @@
+body {background: #2c2c2c;
+    height: auto;
+}
+
+aside {
+    float: center;
+    background: #181818;
+    padding: 2%;
+    height: 15%;
+    color: #fff;
+}
+
+aside img{
+    width: 50px;
+    float: left;
+}
+
+aside .logo{
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -3px;
+}
+
+aside ul{
+list-style: none;
+margin-left: -20px;
+display:inline-block;
+
+}
+
+aside ul li{
+    color: #fff;
+    display:inline-block;
+    margin-left: 50px;
+    margin-top: 10px;
+    transition: all 0.6s ease;
+}
+aside ul a{text-decoration: none;}
+
+aside ul li:hover, aside ul a:hover{
+    color: #0099FF;
+    text-decoration: none;
+    transform: scale(1.20);
+}
+
+div.notes{
+    border: 1px solid black;
+
+}

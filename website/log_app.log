@@ -1,0 +1,88 @@
+2023-04-29 15:09:12,270 - logger - ERROR - При валидации данных произошла ошибка
+Traceback (most recent call last):
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Александр\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\Projects\QuestionnaireTG\website\database.py", line 23, in get_async_session
+    yield session
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\fastapi\routing.py", line 235, in app
+    raise RequestValidationError(errors, body=body)
+fastapi.exceptions.RequestValidationError: 1 validation error for Request
+body -> tg_id
+  field required (type=value_error.missing)
+2023-04-29 15:09:57,445 - logger - ERROR - При валидации данных произошла ошибка
+Traceback (most recent call last):
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Александр\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\Projects\QuestionnaireTG\website\database.py", line 23, in get_async_session
+    yield session
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\QuestionnaireTG\venv\Lib\site-packages\fastapi\routing.py", line 235, in app
+    raise RequestValidationError(errors, body=body)
+fastapi.exceptions.RequestValidationError: 1 validation error for Request
+body -> tg_id
+  field required (type=value_error.missing)
+2023-04-29 15:38:50,577 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body', 'tg_id'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-29 19:08:42,418 - logger - ERROR - dictionary update sequence element #0 has length 1; 2 is required
+2023-04-29 19:25:46,404 - logger - ERROR - tuple indices must be integers or slices, not str
+2023-04-29 19:28:55,751 - logger - ERROR - name
+2023-04-29 19:29:01,140 - logger - ERROR - name
+2023-04-29 19:30:00,780 - logger - ERROR - tg_id
+2023-04-29 19:30:25,009 - logger - ERROR - tuple indices must be integers or slices, not str
+2023-04-29 19:33:23,862 - logger - ERROR - 'ChunkedIteratorResult' object is not subscriptable
+2023-04-29 19:38:03,183 - logger - ERROR - 'MappingResult' object is not subscriptable
+2023-04-29 19:38:19,154 - logger - ERROR - 'list' object has no attribute 'mappings'
+2023-04-29 19:38:20,427 - logger - ERROR - 'list' object has no attribute 'mappings'
+2023-04-29 19:45:22,782 - logger - ERROR - 'ChunkedIteratorResult' object is not subscriptable
+2023-04-29 19:45:53,391 - logger - ERROR - 'ChunkedIteratorResult' object is not subscriptable
+2023-04-29 19:47:06,958 - logger - ERROR - 'ChunkedIteratorResult' object is not subscriptable
+2023-04-29 20:18:34,594 - logger - ERROR - 'ChunkedIteratorResult' object is not subscriptable
+2023-04-29 20:19:32,014 - logger - ERROR - tuple indices must be integers or slices, not str
+2023-04-30 13:58:11,854 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:00:07,967 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('path', 'client_id'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}, {'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:02:58,004 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('path', 'client_id'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}, {'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:07:49,643 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('path', 'client_id'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}, {'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:09:26,057 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('path', 'client_id'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}, {'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:10:50,958 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('path', 'client_id'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}, {'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:12:29,768 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('path', 'client_id'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}, {'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:16:45,708 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('path', 'client_id'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}, {'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:25:44,302 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:27:05,382 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:29:25,049 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:39:51,814 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body',), 'msg': 'value could not be parsed to a boolean', 'type': 'type_error.bool'}]
+2023-04-30 14:42:07,937 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body',), 'msg': 'value could not be parsed to a boolean', 'type': 'type_error.bool'}]
+2023-04-30 14:42:57,450 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body',), 'msg': 'value could not be parsed to a boolean', 'type': 'type_error.bool'}]
+2023-04-30 14:44:17,618 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 14:48:48,996 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body',), 'msg': 'value could not be parsed to a boolean', 'type': 'type_error.bool'}]
+2023-04-30 14:52:48,572 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body',), 'msg': 'value could not be parsed to a boolean', 'type': 'type_error.bool'}]
+2023-04-30 14:53:46,025 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body',), 'msg': 'value could not be parsed to a boolean', 'type': 'type_error.bool'}]
+2023-04-30 14:53:46,323 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body',), 'msg': 'value could not be parsed to a boolean', 'type': 'type_error.bool'}]
+2023-04-30 14:54:39,828 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body',), 'msg': 'value could not be parsed to a boolean', 'type': 'type_error.bool'}]
+2023-04-30 14:55:56,821 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body',), 'msg': 'value could not be parsed to a boolean', 'type': 'type_error.bool'}]
+2023-04-30 14:56:52,524 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body',), 'msg': 'value could not be parsed to a boolean', 'type': 'type_error.bool'}]
+2023-04-30 15:02:46,571 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
+2023-04-30 15:25:58,608 - logger - ERROR - 'coroutine' object has no attribute 'order_by'

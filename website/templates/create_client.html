@@ -1,0 +1,161 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+
+
+<style>
+ a:hover,
+ a:focus{
+ text-decoration: none;
+ outline: none;
+ }
+.btn-gradient-primary {
+ color: #fff;
+ border: none;
+ background: #7a5449;
+ background: linear-gradient(45deg, #7a5449, #6640b2) !important;
+ background: -webkit-bg-linear-gradient(45deg, #7a5449, #6640b2) !important; }
+ .btn-gradient-primary:hover, .btn-gradient-primary:focus {
+ color: #fff;
+ background: #6f483d;
+ background: linear-gradient(45deg, #6f483d, #603bab) !important;
+ background: -webkit-bg-linear-gradient(45deg, #6f483d, #603bab) !important; }
+ .btn-gradient-primary:not(:disabled):not(.disabled).active, .btn-gradient-primary:not(:disabled):not(.disabled):active {
+ color: #fff;
+ background: #633d32;
+ background: linear-gradient(45deg, #633d32, #5935a3) !important;
+ background: -webkit-bg-linear-gradient(45deg, #633d32, #5935a3) !important; }
+ .btn-gradient-primary.disabled, .btn-gradient-primary:disabled {
+ color: #fff;
+ background: #bca9a4;
+ background: linear-gradient(45deg, #bca9a4, #b29fd8) !important;
+ background: -webkit-bg-linear-gradient(45deg, #bca9a4, #b29fd8) !important; }
+</style>
+
+
+<div class="container">
+    <div class="row">
+
+<button class="btn btn-gradient-primary btn-lg btn-block" data-toggle="modal" data-target="#perevod">
+<span><i class="fa fa-money"></i></span>
+<span class="btn-text text-default">Добавить клиента</span>
+</button>
+
+ </div>
+ </div>
+
+<div class="modal fade" id="perevod" tabindex="-1" role="dialog">
+
+ <div class="modal-dialog modal-xl">
+ <div class="modal-content">
+ <div class="card">
+ <div class="card-body">
+
+ <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+ <span aria-hidden="true">&times;</span>
+ </button>
+
+<h4 class="py-10 text-center">Добавить нового клиента</h4>
+<form id="add-client-form">
+
+    <div class="form-group row">
+        <label for="tg_id" class="col-sm-4 col-form-label">Telegram ID</label>
+        <div class="col-sm-8">
+            <input type="number" id="tg_id" name="tg_id" value="" data-type="number" class="form-control" placeholder="Введите telegram ID">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Telegram Link</label>
+        <div class="col-sm-8">
+             <input type="text" id="tg_link" name="tg_link" class="form-control" placeholder="Telegram Link">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Имя клиента</label>
+        <div class="col-sm-8">
+             <input type="text" id="name" name="name" class="form-control" placeholder="Введите имя клиента">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Период инвестирования</label>
+        <div class="col-sm-8">
+             <input type="text" id="investment_time" name="investment_time" class="form-control" placeholder="Введите длительность периодна инвестирования">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Инвестиционные инструменты</label>
+        <div class="col-sm-8">
+             <input type="text" id="investment_tools" name="investment_tools" class="form-control" placeholder="Введите используемые инвестиционные инструменты">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Ежемесячная сумма инвестирования</label>
+        <div class="col-sm-8">
+             <input type="text" id="investment_amount" name="investment_amount" class="form-control" placeholder="Введите ежемесячную сумму инвестирования">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Консультация</label>
+        <div class="col-sm-8">
+             <input type="text" id="meeting" name="meeting" class="form-control" placeholder="Введите дату и время консультации">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-4 col-form-label">Мобильный номер</label>
+        <div class="col-sm-8">
+             <input type="text" id="contact_number" name="contact_number" class="form-control" placeholder="Мобильный номер">
+        </div>
+    </div>
+
+    <input type="submit" value="Добавить" class="btn btn-gradient-primary btn-block btn-lg">
+    <div class="col-sm-4 col-form-label" id="message"></div>
+</form>
+
+            </div>
+        </div>
+    </div>
+ </div>
+
+</div>
+
+<script>
+        const form = document.getElementById('add-client-form');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+
+            try {
+                const response = await fetch('/api/v1/clients/add_new_client', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(Object.fromEntries(formData))
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    console.log(result);
+                    message.textContent = 'Запись успешно добавлена';
+                    console.log(result);
+                } else {
+                    console.error(result);
+                    message.textContent = 'Ошибка при добавлении записи';
+                    console.error(result);
+                }
+            } catch (error) {
+                console.error(error);
+            }
+
+        });
+</script>
+
