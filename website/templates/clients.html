@@ -5,82 +5,140 @@
 {% endblock %}
 
 {% block content %}
-    <div id="create_client" >{% include 'create_client.html' %}</div> <br>
-    {% if clients %}
-        {% for client in clients %}
-            <div class="notes">
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">TG ID:</label>
-                        <div class="col-sm-10">
-                            <label id="client_tg_id" class="form-control-plaintext">{{ client.Client.tg_id }}</label>
-                         </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">TG ссылка:</label>
-                        <div class="col-sm-10">
-                            <label class="form-control-plaintext">{{ client.Client.tg_link }}</label>
-                         </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Имя:</label>
-                        <div class="col-sm-10">
-                            <label class="form-control-plaintext">{{ client.Client.name }}</label>
-                         </div>
-                </div>
+<br>
+<div id="create_client">{% include 'create_client.html' %}</div>
+<br>
+{% if clients %}
+{% for client in clients %}
+<div class="notes">
+    <div id="TG" class="form-group row">
+        <label class="col-sm-2 col-form-label">TG ID:</label>
+        <div class="col-sm-10">
+            <label id="client_tg_id" class="form-control-plaintext">{{ client.Client.tg_id }}</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">TG ссылка:</label>
+        <div class="col-sm-10">
+            <label class="form-control-plaintext">{{ client.Client.tg_link }}</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Имя:</label>
+        <div class="col-sm-10">
+            <label class="form-control-plaintext">{{ client.Client.name }}</label>
+        </div>
+    </div>
 
-                <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Период инвестирования:</label>
-                        <div class="col-sm-10">
-                            <label class="form-control-plaintext">{{ client.Client.investment_time }}</label>
-                         </div>
-                </div>
-                <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Инвестиционный инструменты:</label>
-                                <div class="col-sm-10">
-                                    <label class="form-control-plaintext">{{ client.Client.investment_tools }}</label>
-                                </div>
-                </div>
-                <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Сумма инвестирования в мес:</label>
-                                <div class="col-sm-10">
-                                    <label class="form-control-plaintext">{{ client.Client.investment_amount }}</label>
-                                 </div>
-                </div>
-                <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Когда удобно встретиться:</label>
-                                <div class="col-sm-10">
-                                    <label class="form-control-plaintext">{{ client.Client.meeting }}</label>
-                                 </div>
-                </div>
-                <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Мобильный номер:</label>
-                                <div class="col-sm-10">
-                                    <label class="form-control-plaintext">{{ client.Client.contact_number }}</label>
-                                 </div>
-                </div>
-                <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Дата заполнения:</label>
-                                <div class="col-sm-10">
-                                    <label class="form-control-plaintext">{{ client.Client.registered_at }}</label>
-                                 </div>
-                </div>
-                <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Просмотрен:</label>
-                                <div class="col-sm-10">
-                                    <input type="checkbox" class="processed-checkbox" name="is_processed" data-client-id="client-{{ client.Client.id }}"
-                                           {% if client.Client.is_processed %} checked {% endif %} onchange="updateProcessed({{ client.Client.id }}, this.checked)">
-                                </div>
-                </div>
-            </div>
-        {% endfor %}
-    {% else %}
-        <h1>У вас нет записей!</h1>
-    <br>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Период инвестирования:</label>
+        <div class="col-sm-10">
+            <label class="form-control-plaintext">{{ client.Client.investment_time }}</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Инвестиционный инструменты:</label>
+        <div class="col-sm-10">
+            <label class="form-control-plaintext">{{ client.Client.investment_tools }}</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Сумма инвестирования в мес:</label>
+        <div class="col-sm-10">
+            <label class="form-control-plaintext">{{ client.Client.investment_amount }}</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Когда удобно встретиться:</label>
+        <div class="col-sm-10">
+            <label class="form-control-plaintext">{{ client.Client.meeting }}</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Мобильный номер:</label>
+        <div class="col-sm-10">
+            <label class="form-control-plaintext">{{ client.Client.contact_number }}</label>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Дата заполнения:</label>
+        <div class="col-sm-10">
+            <label class="form-control-plaintext">{{ client.Client.registered_at }}</label>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Просмотрен:</label>
+        <div class="col-sm-10">
+            <input type="checkbox" data-client-id="client-{{ client.Client.id }}"
+                   {% if client.Client.is_processed %} checked {% endif %}
+                   onchange="updateProcessed({{ client.Client.id }}, this.checked)"
+                   id="is_processed_{{ client.Client.id }}" class="check_test">
+            <label for="is_processed_{{ client.Client.id }}" data-onlabel="Да" data-offlabel="Нет" class="lb1"></label>
+        </div>
+    </div>
+
+
+</div>
+<br>
+{% endfor %}
+{% else %}
+<h1>У вас нет записей!</h1>
+<br>
+{% endif %}
+<!-- Оформление кнопок пагинации -->
+
+<div class="paginator-container">
+    {% if down_page %}
+    <a href="?page={{ page-1 }}">
+        <button id="button-paginator-prev" name="button-paginator" class="btn btn-gradient-primary btn-lg btn-block">
+            <span class="btn-text text-default">Предыдущая страница</span>
+        </button>
+    </a>
+    <p class="points_between_pages"></p>
+    {% endif %}
+    <!-- Отображение страницы 1 -->
+    {% if page != 1 %}
+    <a href="?page={{ 1 }}">
+        <button name="paginator-page" class="btn btn-gradient-primary btn-lg btn-block">
+            <span class="btn-text text-default">1</span>
+        </button>
+    </a>
+    <p class="points_between_pages"></p>
+    {% endif %}
+    <!-- Отображение страницы с 1 по последнюю, не включая их -->
+    {% for p in range((page-2, 2)|max, (page+3, max_page)|min) %}
+
+    <a href="?page={{ p }}">
+        <button name="paginator-page" class="btn btn-gradient-primary btn-lg btn-block{% if p == page %} active{% endif %}">
+            <span class="btn-text text-default">{{ p }}</span>
+        </button>
+    </a>
+    {% endfor %}
+
+    <!-- Отображение последней страницы -->
+    {% if page != max_page %}
+    <p class="points_between_pages"></p>
+    <a href="?page={{ max_page }}">
+        <button name="paginator-page" class="btn btn-gradient-primary btn-lg btn-block">
+            <span class="btn-text text-default">{{ max_page }}</span>
+        </button>
+    </a>
     {% endif %}
 
+    {% if has_more %}
+    <p class="points_between_pages"></p>
+    <a href="?page={{ page+1 }}">
+        <button id="button-paginator-next" name="button-paginator" class="btn btn-gradient-primary btn-lg btn-block">
+            <span class="btn-text text-default">Следующая страница</span>
+        </button>
+    </a>
+    {% endif %}
+
+</div>
+<br>
 <script>
     function updateProcessed(clientId, isChecked) {
-        console.log(typeof isChecked);
         fetch(`/api/v1/clients/${clientId}/processed`, {
             method: 'PUT',
             headers: {
@@ -94,9 +152,15 @@
         .then(data => console.log(data))
         .catch(error => console.error(error));
     }
+
+
+
+
+
+
+
+
 </script>
 
 
 {% endblock %}
-
-

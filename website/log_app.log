@@ -86,3 +86,371 @@ body -> tg_id
 2023-04-30 14:56:52,524 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('body',), 'msg': 'value could not be parsed to a boolean', 'type': 'type_error.bool'}]
 2023-04-30 15:02:46,571 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'is_processed'), 'msg': 'field required', 'type': 'value_error.missing'}]
 2023-04-30 15:25:58,608 - logger - ERROR - 'coroutine' object has no attribute 'order_by'
+2023-04-30 18:28:35,207 - logger - ERROR - Neither 'UnaryExpression' object nor 'Comparator' object has an attribute 'offset'
+2023-04-30 18:30:12,638 - logger - ERROR - Neither 'UnaryExpression' object nor 'Comparator' object has an attribute 'offset'
+2023-04-30 18:31:47,998 - logger - ERROR - Neither 'UnaryExpression' object nor 'Comparator' object has an attribute 'offset'
+2023-04-30 18:59:51,359 - logger - ERROR - 'list' object has no attribute 'mappings'
+2023-04-30 19:02:24,703 - logger - ERROR - 'MappingResult' object is not subscriptable
+2023-04-30 19:02:43,741 - logger - ERROR - 'MappingResult' object is not subscriptable
+2023-04-30 19:04:10,669 - logger - INFO - has_more: True
+2023-04-30 19:06:32,325 - logger - INFO - has_more: True
+2023-04-30 19:08:57,591 - logger - INFO - has_more: True
+2023-04-30 19:08:59,581 - logger - INFO - has_more: True
+2023-04-30 19:12:44,386 - logger - INFO - has_more: True
+2023-04-30 19:12:45,670 - logger - INFO - has_more: True
+2023-04-30 19:13:42,991 - logger - INFO - has_more: True
+2023-04-30 19:13:47,569 - logger - INFO - has_more: True
+2023-04-30 19:13:51,826 - logger - INFO - has_more: True
+2023-04-30 19:13:55,324 - logger - INFO - has_more: True
+2023-04-30 19:14:00,356 - logger - INFO - has_more: True
+2023-04-30 19:16:46,407 - logger - INFO - has_more: True
+2023-04-30 19:16:50,438 - logger - INFO - has_more: True
+2023-04-30 19:16:56,535 - logger - INFO - has_more: True
+2023-04-30 19:17:51,043 - logger - INFO - has_more: True
+2023-04-30 19:17:53,029 - logger - INFO - has_more: False
+2023-04-30 19:17:59,194 - logger - INFO - has_more: False
+2023-04-30 19:18:09,941 - logger - INFO - has_more: True
+2023-04-30 19:18:12,339 - logger - INFO - has_more: True
+2023-04-30 19:18:14,114 - logger - INFO - has_more: True
+2023-04-30 19:18:38,412 - logger - INFO - has_more: True
+2023-04-30 19:18:44,432 - logger - INFO - has_more: True
+2023-04-30 19:18:46,924 - logger - INFO - has_more: True
+2023-04-30 19:18:55,663 - logger - INFO - has_more: True
+2023-04-30 19:19:15,923 - logger - INFO - has_more: True
+2023-04-30 19:19:17,480 - logger - INFO - has_more: True
+2023-04-30 19:19:27,783 - logger - INFO - has_more: True
+2023-04-30 19:25:38,654 - logger - INFO - has_more: True
+2023-04-30 19:25:41,763 - logger - INFO - has_more: True
+2023-04-30 19:25:45,097 - logger - INFO - has_more: True
+2023-04-30 19:25:47,469 - logger - INFO - has_more: False
+2023-04-30 19:26:16,022 - logger - INFO - has_more: True
+2023-04-30 19:26:16,024 - logger - INFO - down_page: False
+2023-04-30 19:26:18,852 - logger - INFO - has_more: True
+2023-04-30 19:26:18,853 - logger - INFO - down_page: False
+2023-04-30 19:26:20,454 - logger - INFO - has_more: True
+2023-04-30 19:26:20,454 - logger - INFO - down_page: True
+2023-04-30 19:26:23,807 - logger - INFO - has_more: True
+2023-04-30 19:26:23,807 - logger - INFO - down_page: True
+2023-04-30 19:27:02,347 - logger - INFO - has_more: True
+2023-04-30 19:27:02,347 - logger - INFO - down_page: True
+2023-04-30 19:35:08,458 - logger - INFO - has_more: True
+2023-04-30 19:35:08,460 - logger - INFO - down_page: True
+2023-04-30 19:35:09,831 - logger - INFO - has_more: True
+2023-04-30 19:35:09,831 - logger - INFO - down_page: True
+2023-04-30 19:35:11,538 - logger - INFO - has_more: True
+2023-04-30 19:35:11,538 - logger - INFO - down_page: True
+2023-04-30 19:36:16,972 - logger - INFO - has_more: True
+2023-04-30 19:36:16,972 - logger - INFO - down_page: True
+2023-04-30 19:36:48,428 - logger - INFO - has_more: True
+2023-04-30 19:36:48,428 - logger - INFO - down_page: True
+2023-04-30 19:37:08,774 - logger - INFO - has_more: True
+2023-04-30 19:37:08,774 - logger - INFO - down_page: True
+2023-04-30 19:39:24,964 - logger - INFO - has_more: True
+2023-04-30 19:39:24,964 - logger - INFO - down_page: True
+2023-04-30 19:39:26,878 - logger - INFO - has_more: True
+2023-04-30 19:39:26,878 - logger - INFO - down_page: True
+2023-04-30 19:39:40,556 - logger - INFO - has_more: True
+2023-04-30 19:39:40,558 - logger - INFO - down_page: True
+2023-04-30 19:41:15,619 - logger - INFO - has_more: True
+2023-04-30 19:41:15,619 - logger - INFO - down_page: True
+2023-04-30 19:41:24,431 - logger - INFO - has_more: True
+2023-04-30 19:41:24,433 - logger - INFO - down_page: True
+2023-04-30 19:43:48,023 - logger - INFO - has_more: True
+2023-04-30 19:43:48,025 - logger - INFO - down_page: True
+2023-04-30 19:45:04,955 - logger - INFO - has_more: True
+2023-04-30 19:45:04,957 - logger - INFO - down_page: True
+2023-04-30 19:45:06,089 - logger - INFO - has_more: True
+2023-04-30 19:45:06,089 - logger - INFO - down_page: True
+2023-04-30 19:45:15,911 - logger - INFO - has_more: True
+2023-04-30 19:45:15,911 - logger - INFO - down_page: True
+2023-04-30 19:45:23,661 - logger - INFO - has_more: True
+2023-04-30 19:45:23,661 - logger - INFO - down_page: True
+2023-04-30 19:45:32,877 - logger - INFO - has_more: True
+2023-04-30 19:45:32,879 - logger - INFO - down_page: True
+2023-04-30 19:46:37,096 - logger - INFO - has_more: True
+2023-04-30 19:46:37,096 - logger - INFO - down_page: True
+2023-04-30 19:47:15,818 - logger - INFO - has_more: True
+2023-04-30 19:47:15,818 - logger - INFO - down_page: True
+2023-04-30 19:47:41,325 - logger - INFO - has_more: True
+2023-04-30 19:47:41,325 - logger - INFO - down_page: True
+2023-04-30 19:48:03,466 - logger - INFO - has_more: True
+2023-04-30 19:48:03,466 - logger - INFO - down_page: True
+2023-04-30 19:48:19,365 - logger - INFO - has_more: True
+2023-04-30 19:48:19,365 - logger - INFO - down_page: True
+2023-04-30 19:48:36,788 - logger - INFO - has_more: True
+2023-04-30 19:48:36,788 - logger - INFO - down_page: True
+2023-04-30 19:48:48,472 - logger - INFO - has_more: True
+2023-04-30 19:48:48,472 - logger - INFO - down_page: True
+2023-04-30 19:50:16,714 - logger - INFO - has_more: True
+2023-04-30 19:50:16,714 - logger - INFO - down_page: True
+2023-04-30 19:50:39,148 - logger - INFO - has_more: True
+2023-04-30 19:50:39,148 - logger - INFO - down_page: True
+2023-04-30 19:51:10,485 - logger - INFO - has_more: True
+2023-04-30 19:51:10,485 - logger - INFO - down_page: True
+2023-04-30 19:51:18,667 - logger - INFO - has_more: True
+2023-04-30 19:51:18,667 - logger - INFO - down_page: True
+2023-04-30 19:51:20,537 - logger - INFO - has_more: True
+2023-04-30 19:51:20,538 - logger - INFO - down_page: True
+2023-04-30 19:52:24,790 - logger - INFO - has_more: True
+2023-04-30 19:52:24,792 - logger - INFO - down_page: True
+2023-04-30 19:52:27,361 - logger - INFO - has_more: True
+2023-04-30 19:52:27,361 - logger - INFO - down_page: True
+2023-04-30 19:52:28,925 - logger - INFO - has_more: True
+2023-04-30 19:52:28,926 - logger - INFO - down_page: True
+2023-04-30 19:52:30,505 - logger - INFO - has_more: True
+2023-04-30 19:52:30,506 - logger - INFO - down_page: False
+2023-04-30 19:52:56,023 - logger - INFO - has_more: True
+2023-04-30 19:52:56,023 - logger - INFO - down_page: False
+2023-04-30 19:53:02,280 - logger - INFO - has_more: False
+2023-04-30 19:53:02,280 - logger - INFO - down_page: True
+2023-04-30 19:53:07,626 - logger - INFO - has_more: True
+2023-04-30 19:53:07,626 - logger - INFO - down_page: False
+2023-04-30 19:53:14,525 - logger - INFO - has_more: True
+2023-04-30 19:53:14,525 - logger - INFO - down_page: False
+2023-04-30 19:53:16,952 - logger - INFO - has_more: True
+2023-04-30 19:53:16,952 - logger - INFO - down_page: True
+2023-04-30 19:53:22,554 - logger - INFO - has_more: True
+2023-04-30 19:53:22,555 - logger - INFO - down_page: False
+2023-04-30 19:54:00,595 - logger - INFO - has_more: True
+2023-04-30 19:54:00,595 - logger - INFO - down_page: False
+2023-04-30 19:54:05,233 - logger - INFO - has_more: True
+2023-04-30 19:54:05,234 - logger - INFO - down_page: True
+2023-04-30 19:54:31,073 - logger - INFO - has_more: True
+2023-04-30 19:54:31,073 - logger - INFO - down_page: True
+2023-04-30 19:54:32,691 - logger - INFO - has_more: True
+2023-04-30 19:54:32,691 - logger - INFO - down_page: False
+2023-04-30 19:54:35,395 - logger - INFO - has_more: True
+2023-04-30 19:54:35,395 - logger - INFO - down_page: True
+2023-04-30 19:54:38,717 - logger - INFO - has_more: True
+2023-04-30 19:54:38,718 - logger - INFO - down_page: True
+2023-04-30 19:54:40,677 - logger - INFO - has_more: False
+2023-04-30 19:54:40,677 - logger - INFO - down_page: True
+2023-04-30 19:56:52,212 - logger - INFO - has_more: False
+2023-04-30 19:56:52,212 - logger - INFO - down_page: True
+2023-04-30 19:56:54,482 - logger - INFO - has_more: True
+2023-04-30 19:56:54,484 - logger - INFO - down_page: True
+2023-04-30 19:57:08,408 - logger - INFO - has_more: False
+2023-04-30 19:57:08,409 - logger - INFO - down_page: True
+2023-04-30 19:57:11,846 - logger - INFO - has_more: True
+2023-04-30 19:57:11,846 - logger - INFO - down_page: True
+2023-04-30 19:57:34,616 - logger - INFO - has_more: True
+2023-04-30 19:57:34,616 - logger - INFO - down_page: True
+2023-04-30 19:57:36,095 - logger - INFO - has_more: True
+2023-04-30 19:57:36,095 - logger - INFO - down_page: True
+2023-04-30 19:57:38,079 - logger - INFO - has_more: True
+2023-04-30 19:57:38,079 - logger - INFO - down_page: False
+2023-04-30 20:02:19,433 - logger - INFO - has_more: True
+2023-04-30 20:02:19,433 - logger - INFO - down_page: False
+2023-04-30 20:07:36,563 - logger - INFO - has_more: True
+2023-04-30 20:07:36,563 - logger - INFO - down_page: False
+2023-04-30 20:07:36,563 - logger - INFO - max_page: 1
+2023-04-30 20:09:19,381 - logger - INFO - has_more: True
+2023-04-30 20:09:19,383 - logger - INFO - down_page: False
+2023-04-30 20:09:19,383 - logger - INFO - max_page: 1
+2023-04-30 20:09:21,902 - logger - INFO - has_more: False
+2023-04-30 20:09:21,904 - logger - INFO - down_page: False
+2023-04-30 20:09:21,904 - logger - INFO - max_page: 1.0
+2023-04-30 20:10:11,692 - logger - INFO - has_more: False
+2023-04-30 20:10:11,692 - logger - INFO - down_page: False
+2023-04-30 20:10:11,694 - logger - INFO - max_page: 1.0
+2023-04-30 20:10:14,036 - logger - INFO - has_more: False
+2023-04-30 20:10:14,036 - logger - INFO - down_page: False
+2023-04-30 20:10:14,038 - logger - INFO - max_page: 1.0
+2023-04-30 20:11:57,368 - logger - INFO - has_more: False
+2023-04-30 20:11:57,368 - logger - INFO - down_page: False
+2023-04-30 20:11:57,368 - logger - INFO - max_page: 1.0
+2023-04-30 20:11:58,898 - logger - INFO - has_more: False
+2023-04-30 20:11:58,898 - logger - INFO - down_page: False
+2023-04-30 20:11:58,900 - logger - INFO - max_page: 1.0
+2023-04-30 20:14:11,548 - logger - INFO - has_more: False
+2023-04-30 20:14:11,548 - logger - INFO - down_page: False
+2023-04-30 20:14:11,550 - logger - INFO - max_page: 1.0
+2023-04-30 20:14:12,409 - logger - INFO - has_more: False
+2023-04-30 20:14:12,409 - logger - INFO - down_page: False
+2023-04-30 20:14:12,411 - logger - INFO - max_page: 1.0
+2023-04-30 20:15:17,076 - logger - INFO - has_more: False
+2023-04-30 20:15:17,076 - logger - INFO - down_page: False
+2023-04-30 20:15:17,076 - logger - INFO - max_page: 10
+2023-04-30 20:15:18,208 - logger - INFO - has_more: False
+2023-04-30 20:15:18,208 - logger - INFO - down_page: False
+2023-04-30 20:15:18,210 - logger - INFO - max_page: 10
+2023-04-30 20:21:32,366 - logger - INFO - has_more: False
+2023-04-30 20:21:32,366 - logger - INFO - down_page: False
+2023-04-30 20:21:32,366 - logger - INFO - max_page: 10
+2023-04-30 20:21:43,052 - logger - INFO - has_more: False
+2023-04-30 20:21:43,052 - logger - INFO - down_page: False
+2023-04-30 20:21:43,052 - logger - INFO - max_page: 10
+2023-04-30 20:22:55,807 - logger - INFO - has_more: False
+2023-04-30 20:22:55,807 - logger - INFO - down_page: False
+2023-04-30 20:22:55,809 - logger - INFO - max_page: 10
+2023-04-30 20:23:15,918 - logger - INFO - has_more: False
+2023-04-30 20:23:15,918 - logger - INFO - down_page: False
+2023-04-30 20:23:15,920 - logger - INFO - max_page: 10
+2023-04-30 20:27:50,293 - logger - INFO - страница: 1
+2023-04-30 20:27:50,293 - logger - INFO - has_more: False
+2023-04-30 20:27:50,293 - logger - INFO - down_page: False
+2023-04-30 20:27:50,295 - logger - INFO - max_page: 1
+2023-04-30 20:27:50,295 - logger - INFO - всего записей: 5
+2023-04-30 20:28:16,914 - logger - INFO - страница: 1
+2023-04-30 20:28:16,916 - logger - INFO - has_more: False
+2023-04-30 20:28:16,916 - logger - INFO - down_page: False
+2023-04-30 20:28:16,916 - logger - INFO - max_page: 1
+2023-04-30 20:28:16,916 - logger - INFO - всего записей: 5
+2023-04-30 20:28:24,607 - logger - INFO - страница: 1
+2023-04-30 20:28:24,607 - logger - INFO - has_more: False
+2023-04-30 20:28:24,607 - logger - INFO - down_page: False
+2023-04-30 20:28:24,607 - logger - INFO - max_page: 1
+2023-04-30 20:28:24,607 - logger - INFO - всего записей: 5
+2023-04-30 20:35:37,228 - logger - INFO - страница: 1
+2023-04-30 20:35:37,228 - logger - INFO - has_more: False
+2023-04-30 20:35:37,228 - logger - INFO - down_page: False
+2023-04-30 20:35:37,229 - logger - INFO - max_page: 1
+2023-04-30 20:35:37,229 - logger - INFO - всего записей: 5
+2023-04-30 20:49:26,014 - logger - ERROR - object of type 'Select' has no len()
+2023-04-30 20:50:32,670 - logger - ERROR - При создании новой записи произошла ошибка
+(sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 231341231231231231233123 (value out of int64 range)
+[SQL: INSERT INTO client (tg_id, tg_link, name, investment_time, investment_tools, investment_amount, meeting, contact_number, registered_at, is_processed) VALUES ($1::BIGINT, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR, $7::VARCHAR, $8::VARCHAR, $9::TIMESTAMP WITHOUT TIME ZONE, $10::BOOLEAN) RETURNING client.id]
+[parameters: (231341231231231231233123, 'string', 'string', 'string', 'string', 'string', 'string', 'string', datetime.datetime(2023, 4, 30, 16, 50, 32, 560029), False)]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2023-04-30 21:11:47,457 - logger - ERROR - 'MappingResult' object is not subscriptable
+2023-04-30 21:47:13,642 - logger - ERROR - 'MappingResult' object is not subscriptable
+2023-04-30 21:47:51,146 - logger - ERROR - 'MappingResult' object is not subscriptable
+2023-04-30 21:48:54,604 - logger - ERROR - 'MappingResult' object is not subscriptable
+2023-04-30 21:48:59,715 - logger - ERROR - object of type 'ChunkedIteratorResult' has no len()
+2023-04-30 21:50:30,337 - logger - ERROR - object of type 'Select' has no len()
+2023-04-30 21:51:02,722 - logger - ERROR - unhashable type: 'slice'
+2023-04-30 21:51:58,984 - logger - ERROR - object of type 'Select' has no len()
+2023-04-30 21:55:05,131 - logger - ERROR - object of type 'Select' has no len()
+2023-04-30 21:55:45,852 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000001D1189A0C90>}, {'Client': <clients.models.Client object at 0x000001D11894C210>}, {'Client': <clients.models.Client object at 0x000001D1189A0D10>}, {'Client': <clients.models.Client object at 0x000001D1189A0D90>}, {'Client': <clients.models.Client object at 0x000001D1189A0E10>}, {'Client': <clients.models.Client object at 0x000001D1189A0ED0>}, {'Client': <clients.models.Client object at 0x000001D1189A0F50>}, {'Client': <clients.models.Client object at 0x000001D1189A0FD0>}, {'Client': <clients.models.Client object at 0x000001D1189A1050>}, {'Client': <clients.models.Client object at 0x000001D1189A0E90>}, {'Client': <clients.models.Client object at 0x000001D1189A1110>}, {'Client': <clients.models.Client object at 0x000001D1189A1190>}, {'Client': <clients.models.Client object at 0x000001D1189A1250>}, {'Client': <clients.models.Client object at 0x000001D1189A1350>}, {'Client': <clients.models.Client object at 0x000001D1189A1450>}, {'Client': <clients.models.Client object at 0x000001D1189A1550>}, {'Client': <clients.models.Client object at 0x000001D1189A1650>}, {'Client': <clients.models.Client object at 0x000001D1189A1750>}, {'Client': <clients.models.Client object at 0x000001D1189A1850>}, {'Client': <clients.models.Client object at 0x000001D1189A1950>}]
+2023-04-30 21:55:45,853 - logger - ERROR - object of type 'Select' has no len()
+2023-04-30 21:56:16,486 - logger - INFO - дата: 20
+2023-04-30 21:56:16,487 - logger - ERROR - object of type 'Select' has no len()
+2023-04-30 21:56:29,589 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x0000020280AE0C50>}, {'Client': <clients.models.Client object at 0x0000020280A8C210>}, {'Client': <clients.models.Client object at 0x0000020280AE0CD0>}, {'Client': <clients.models.Client object at 0x0000020280AE0D50>}, {'Client': <clients.models.Client object at 0x0000020280AE0DD0>}]
+2023-04-30 21:56:29,589 - logger - ERROR - object of type 'Select' has no len()
+2023-04-30 22:01:17,734 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000001A527C94190>}, {'Client': <clients.models.Client object at 0x000001A527E4C5D0>}, {'Client': <clients.models.Client object at 0x000001A527E4C650>}, {'Client': <clients.models.Client object at 0x000001A527E4C6D0>}, {'Client': <clients.models.Client object at 0x000001A527E4C750>}]
+2023-04-30 22:01:17,736 - logger - INFO - страница: 1
+2023-04-30 22:01:17,736 - logger - INFO - страница: 2
+2023-04-30 22:01:17,738 - logger - INFO - страница: 3
+2023-04-30 22:01:17,738 - logger - INFO - has_more: True
+2023-04-30 22:01:17,738 - logger - INFO - down_page: False
+2023-04-30 22:01:17,740 - logger - INFO - max_page: 4
+2023-04-30 22:01:17,740 - logger - INFO - всего записей: 5
+2023-04-30 22:01:33,251 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000001A52924C090>}, {'Client': <clients.models.Client object at 0x000001A52924C110>}, {'Client': <clients.models.Client object at 0x000001A52924C190>}, {'Client': <clients.models.Client object at 0x000001A52924C210>}, {'Client': <clients.models.Client object at 0x000001A52924C290>}]
+2023-04-30 22:01:33,251 - logger - INFO - страница: 1
+2023-04-30 22:01:33,251 - logger - INFO - страница: 2
+2023-04-30 22:01:33,253 - logger - INFO - страница: 3
+2023-04-30 22:01:33,253 - logger - INFO - страница: 4
+2023-04-30 22:01:33,253 - logger - INFO - has_more: True
+2023-04-30 22:01:33,253 - logger - INFO - down_page: True
+2023-04-30 22:01:33,253 - logger - INFO - max_page: 4
+2023-04-30 22:01:33,253 - logger - INFO - всего записей: 5
+2023-04-30 22:01:37,938 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000001A527E3A210>}, {'Client': <clients.models.Client object at 0x000001A527DF3410>}, {'Client': <clients.models.Client object at 0x000001A527DF3B90>}, {'Client': <clients.models.Client object at 0x000001A5260992D0>}, {'Client': <clients.models.Client object at 0x000001A529235F10>}]
+2023-04-30 22:01:37,939 - logger - INFO - страница: 1
+2023-04-30 22:01:37,939 - logger - INFO - страница: 2
+2023-04-30 22:01:37,939 - logger - INFO - страница: 3
+2023-04-30 22:01:37,939 - logger - INFO - страница: 4
+2023-04-30 22:01:37,939 - logger - INFO - has_more: True
+2023-04-30 22:01:37,940 - logger - INFO - down_page: True
+2023-04-30 22:01:37,940 - logger - INFO - max_page: 4
+2023-04-30 22:01:37,940 - logger - INFO - всего записей: 5
+2023-04-30 22:01:41,102 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000001A52924F150>}, {'Client': <clients.models.Client object at 0x000001A52924F1D0>}, {'Client': <clients.models.Client object at 0x000001A52924F250>}, {'Client': <clients.models.Client object at 0x000001A52924F2D0>}, {'Client': <clients.models.Client object at 0x000001A52924F350>}]
+2023-04-30 22:01:41,103 - logger - INFO - страница: 2
+2023-04-30 22:01:41,103 - logger - INFO - страница: 3
+2023-04-30 22:01:41,103 - logger - INFO - страница: 4
+2023-04-30 22:01:41,104 - logger - INFO - has_more: True
+2023-04-30 22:01:41,104 - logger - INFO - down_page: True
+2023-04-30 22:01:41,105 - logger - INFO - max_page: 4
+2023-04-30 22:01:41,105 - logger - INFO - всего записей: 5
+2023-04-30 22:01:43,565 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000001A52924E8D0>}, {'Client': <clients.models.Client object at 0x000001A52924F890>}, {'Client': <clients.models.Client object at 0x000001A52924FCD0>}, {'Client': <clients.models.Client object at 0x000001A52924C150>}, {'Client': <clients.models.Client object at 0x000001A52924FD10>}]
+2023-04-30 22:01:43,566 - logger - INFO - страница: 3
+2023-04-30 22:01:43,567 - logger - INFO - страница: 4
+2023-04-30 22:01:43,568 - logger - INFO - has_more: True
+2023-04-30 22:01:43,568 - logger - INFO - down_page: True
+2023-04-30 22:01:43,569 - logger - INFO - max_page: 4
+2023-04-30 22:01:43,569 - logger - INFO - всего записей: 0
+2023-04-30 22:01:46,706 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000001A52924D550>}, {'Client': <clients.models.Client object at 0x000001A52924F650>}, {'Client': <clients.models.Client object at 0x000001A52924D5D0>}, {'Client': <clients.models.Client object at 0x000001A52924DF90>}, {'Client': <clients.models.Client object at 0x000001A52924D610>}]
+2023-04-30 22:01:46,707 - logger - INFO - страница: 4
+2023-04-30 22:01:46,707 - logger - INFO - has_more: True
+2023-04-30 22:01:46,707 - logger - INFO - down_page: True
+2023-04-30 22:01:46,708 - logger - INFO - max_page: 4
+2023-04-30 22:01:46,708 - logger - INFO - всего записей: 0
+2023-04-30 22:01:49,557 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000001A52924D950>}, {'Client': <clients.models.Client object at 0x000001A52924D8D0>}, {'Client': <clients.models.Client object at 0x000001A52924C9D0>}, {'Client': <clients.models.Client object at 0x000001A5292600D0>}, {'Client': <clients.models.Client object at 0x000001A529260210>}]
+2023-04-30 22:01:49,558 - logger - INFO - has_more: True
+2023-04-30 22:01:49,558 - logger - INFO - down_page: True
+2023-04-30 22:01:49,558 - logger - INFO - max_page: 4
+2023-04-30 22:01:49,559 - logger - INFO - всего записей: 0
+2023-04-30 22:02:29,368 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000002445CF10CD0>}, {'Client': <clients.models.Client object at 0x000002445CAFA610>}, {'Client': <clients.models.Client object at 0x000002445CF10D90>}, {'Client': <clients.models.Client object at 0x000002445CF10E10>}, {'Client': <clients.models.Client object at 0x000002445CF10E90>}]
+2023-04-30 22:02:29,368 - logger - INFO - has_more: False
+2023-04-30 22:02:29,370 - logger - INFO - down_page: True
+2023-04-30 22:02:29,370 - logger - INFO - max_page: 4
+2023-04-30 22:02:29,370 - logger - INFO - всего записей: 0
+2023-04-30 22:02:30,385 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000002445CFC3350>}, {'Client': <clients.models.Client object at 0x000002445CFC1A10>}, {'Client': <clients.models.Client object at 0x000002445CFC1AD0>}, {'Client': <clients.models.Client object at 0x000002445CFC3890>}, {'Client': <clients.models.Client object at 0x000002445CFC1C10>}]
+2023-04-30 22:02:30,387 - logger - INFO - страница: 4
+2023-04-30 22:02:30,387 - logger - INFO - has_more: False
+2023-04-30 22:02:30,387 - logger - INFO - down_page: True
+2023-04-30 22:02:30,387 - logger - INFO - max_page: 4
+2023-04-30 22:02:30,387 - logger - INFO - всего записей: 0
+2023-04-30 22:02:30,981 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000002445CFC1E10>}, {'Client': <clients.models.Client object at 0x000002445CFC0950>}, {'Client': <clients.models.Client object at 0x000002445CFC0810>}, {'Client': <clients.models.Client object at 0x000002445CFA4390>}, {'Client': <clients.models.Client object at 0x000002445CFA5D10>}]
+2023-04-30 22:02:30,983 - logger - INFO - страница: 3
+2023-04-30 22:02:30,983 - logger - INFO - страница: 4
+2023-04-30 22:02:30,983 - logger - INFO - has_more: False
+2023-04-30 22:02:30,983 - logger - INFO - down_page: True
+2023-04-30 22:02:30,983 - logger - INFO - max_page: 4
+2023-04-30 22:02:30,985 - logger - INFO - всего записей: 0
+2023-04-30 22:02:31,614 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000002445CFCD710>}, {'Client': <clients.models.Client object at 0x000002445CFCD750>}, {'Client': <clients.models.Client object at 0x000002445CFCD7D0>}, {'Client': <clients.models.Client object at 0x000002445CFCD290>}, {'Client': <clients.models.Client object at 0x000002445CFCCBD0>}]
+2023-04-30 22:02:31,616 - logger - INFO - страница: 2
+2023-04-30 22:02:31,616 - logger - INFO - страница: 3
+2023-04-30 22:02:31,616 - logger - INFO - страница: 4
+2023-04-30 22:02:31,616 - logger - INFO - has_more: False
+2023-04-30 22:02:31,618 - logger - INFO - down_page: True
+2023-04-30 22:02:31,618 - logger - INFO - max_page: 4
+2023-04-30 22:02:31,618 - logger - INFO - всего записей: 5
+2023-04-30 22:02:33,964 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000002445CFCEA90>}, {'Client': <clients.models.Client object at 0x000002445CFCEB10>}, {'Client': <clients.models.Client object at 0x000002445CFCEB90>}, {'Client': <clients.models.Client object at 0x000002445CFCEC10>}, {'Client': <clients.models.Client object at 0x000002445CFCEC90>}]
+2023-04-30 22:02:33,964 - logger - INFO - страница: 1
+2023-04-30 22:02:33,965 - logger - INFO - страница: 2
+2023-04-30 22:02:33,965 - logger - INFO - страница: 3
+2023-04-30 22:02:33,965 - logger - INFO - страница: 4
+2023-04-30 22:02:33,966 - logger - INFO - has_more: True
+2023-04-30 22:02:33,966 - logger - INFO - down_page: True
+2023-04-30 22:02:33,966 - logger - INFO - max_page: 4
+2023-04-30 22:02:33,966 - logger - INFO - всего записей: 5
+2023-04-30 22:02:36,375 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000002445CFCF450>}, {'Client': <clients.models.Client object at 0x000002445CFCF550>}, {'Client': <clients.models.Client object at 0x000002445CFCF590>}, {'Client': <clients.models.Client object at 0x000002445CFCF750>}, {'Client': <clients.models.Client object at 0x000002445CFCF810>}]
+2023-04-30 22:02:36,375 - logger - INFO - страница: 2
+2023-04-30 22:02:36,376 - logger - INFO - страница: 3
+2023-04-30 22:02:36,376 - logger - INFO - страница: 4
+2023-04-30 22:02:36,376 - logger - INFO - has_more: False
+2023-04-30 22:02:36,377 - logger - INFO - down_page: True
+2023-04-30 22:02:36,377 - logger - INFO - max_page: 4
+2023-04-30 22:02:36,377 - logger - INFO - всего записей: 5
+2023-04-30 22:02:42,386 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000002445CFCD490>}, {'Client': <clients.models.Client object at 0x000002445CFCD950>}, {'Client': <clients.models.Client object at 0x000002445CFCE9D0>}, {'Client': <clients.models.Client object at 0x000002445CFCEF90>}, {'Client': <clients.models.Client object at 0x000002445CFCD610>}]
+2023-04-30 22:02:42,387 - logger - INFO - страница: 1
+2023-04-30 22:02:42,387 - logger - INFO - страница: 2
+2023-04-30 22:02:42,387 - logger - INFO - страница: 3
+2023-04-30 22:02:42,388 - logger - INFO - страница: 4
+2023-04-30 22:02:42,388 - logger - INFO - has_more: True
+2023-04-30 22:02:42,388 - logger - INFO - down_page: True
+2023-04-30 22:02:42,389 - logger - INFO - max_page: 4
+2023-04-30 22:02:42,389 - logger - INFO - всего записей: 5
+2023-04-30 22:02:43,744 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000002445CFCEFD0>}, {'Client': <clients.models.Client object at 0x000002445CFCD2D0>}, {'Client': <clients.models.Client object at 0x000002445CFCCD50>}, {'Client': <clients.models.Client object at 0x000002445CFCC7D0>}, {'Client': <clients.models.Client object at 0x000002445CFCC210>}]
+2023-04-30 22:02:43,745 - logger - INFO - страница: 1
+2023-04-30 22:02:43,745 - logger - INFO - страница: 2
+2023-04-30 22:02:43,746 - logger - INFO - страница: 3
+2023-04-30 22:02:43,747 - logger - INFO - страница: 4
+2023-04-30 22:02:43,747 - logger - INFO - has_more: True
+2023-04-30 22:02:43,747 - logger - INFO - down_page: True
+2023-04-30 22:02:43,748 - logger - INFO - max_page: 4
+2023-04-30 22:02:43,748 - logger - INFO - всего записей: 5
+2023-04-30 22:02:45,134 - logger - INFO - дата: [{'Client': <clients.models.Client object at 0x000002445CFCE510>}, {'Client': <clients.models.Client object at 0x000002445CFCF350>}, {'Client': <clients.models.Client object at 0x000002445CFCF3D0>}, {'Client': <clients.models.Client object at 0x000002445CFCE590>}, {'Client': <clients.models.Client object at 0x000002445CFCCA10>}]
+2023-04-30 22:02:45,135 - logger - INFO - страница: 1
+2023-04-30 22:02:45,135 - logger - INFO - страница: 2
+2023-04-30 22:02:45,136 - logger - INFO - страница: 3
+2023-04-30 22:02:45,136 - logger - INFO - has_more: True
+2023-04-30 22:02:45,136 - logger - INFO - down_page: False
+2023-04-30 22:02:45,136 - logger - INFO - max_page: 4
+2023-04-30 22:02:45,137 - logger - INFO - всего записей: 5
+2023-05-01 14:48:15,194 - logger - INFO - <class 'sqlalchemy.engine.result.ChunkedIteratorResult'>
+2023-05-01 16:45:40,239 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'page'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}]
+2023-05-01 16:45:44,756 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'page'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}]
+2023-05-01 16:46:08,182 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'page'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}]
+2023-05-01 16:46:29,496 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'page'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}]
+2023-05-01 16:46:48,669 - logger - ERROR - При валидации запроса возникла ошибка: [{'loc': ('query', 'page'), 'msg': 'value is not a valid integer', 'type': 'type_error.integer'}]

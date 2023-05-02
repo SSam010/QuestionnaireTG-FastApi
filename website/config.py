@@ -13,5 +13,7 @@ DB_PASSWORD = os.environ.get("DB_PASSWORD")
 TOKEN = os.environ.get("TOKEN")
 OWNER_ID = os.environ.get("OWNER_ID")
 
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 

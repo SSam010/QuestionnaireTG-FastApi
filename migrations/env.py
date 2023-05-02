@@ -1,6 +1,7 @@
 import os
 import sys
 
+
 sys.path.append(os.path.join(sys.path[0], 'chat_bot'))
 sys.path.append(os.path.join(sys.path[0], 'website'))
 
@@ -11,10 +12,11 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from config import DB_PASSWORD, DB_HOST, DB_USER, DB_NAME, DB_PORT
+from database import Base
 from clients.models import Client
+from auth.models import User
 
-# this is the Alembic Config object, which provides
-# access to the values within the .ini file in use.
+
 config = context.config
 
 section = config.config_ini_section
@@ -33,7 +35,7 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = [Client.metadata]
+target_metadata = [Base.metadata]
 
 
 # other values from the config, defined by the needs of env.py,
