@@ -5,86 +5,139 @@
 {% endblock %}
 
 {% block content %}
+<!-- Начало блока добавления записи -->
+
 <br>
-<div id="create_client">{% include 'create_client.html' %}</div>
-<br>
-{% if clients %}
-{% for client in clients %}
-<div class="notes">
-    <div id="TG" class="form-group row">
-        <label class="col-sm-2 col-form-label">TG ID:</label>
-        <div class="col-sm-10">
-            <label id="client_tg_id" class="form-control-plaintext">{{ client.Client.tg_id }}</label>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">TG ссылка:</label>
-        <div class="col-sm-10">
-            <label class="form-control-plaintext">{{ client.Client.tg_link }}</label>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Имя:</label>
-        <div class="col-sm-10">
-            <label class="form-control-plaintext">{{ client.Client.name }}</label>
-        </div>
-    </div>
 
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Период инвестирования:</label>
-        <div class="col-sm-10">
-            <label class="form-control-plaintext">{{ client.Client.investment_time }}</label>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Инвестиционный инструменты:</label>
-        <div class="col-sm-10">
-            <label class="form-control-plaintext">{{ client.Client.investment_tools }}</label>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Сумма инвестирования в мес:</label>
-        <div class="col-sm-10">
-            <label class="form-control-plaintext">{{ client.Client.investment_amount }}</label>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Когда удобно встретиться:</label>
-        <div class="col-sm-10">
-            <label class="form-control-plaintext">{{ client.Client.meeting }}</label>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Мобильный номер:</label>
-        <div class="col-sm-10">
-            <label class="form-control-plaintext">{{ client.Client.contact_number }}</label>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Дата заполнения:</label>
-        <div class="col-sm-10">
-            <label class="form-control-plaintext">{{ client.Client.registered_at }}</label>
-        </div>
-    </div>
+<!-- необходимые переменный для обработки формы по добавлению записи-->
+{% set form_id = "add-client-form" %}
+{% set id_message = "create_client_message" %}
+{% set some_function = "createClient(create_client_message)" %}
+{% set label_form_name = "Добавить нового клиента" %}
 
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Просмотрен:</label>
-        <div class="col-sm-10">
-            <input type="checkbox" data-client-id="client-{{ client.Client.id }}"
-                   {% if client.Client.is_processed %} checked {% endif %}
-                   onchange="updateProcessed({{ client.Client.id }}, this.checked)"
-                   id="is_processed_{{ client.Client.id }}" class="check_test">
-            <label for="is_processed_{{ client.Client.id }}" data-onlabel="Да" data-offlabel="Нет" class="lb1"></label>
-        </div>
+<div class="container">
+    <div class="row">
+        <button class="btn btn-gradient-primary btn-lg btn-block" data-toggle="modal" data-target="#form{{ form_id }}">
+            <span><i class="bi bi-people-fill"></i></span>
+            <span class="btn-text text-default">Добавить клиента</span>
+        </button>
     </div>
-
-
 </div>
+
+
+<div id="create_client">{% include 'create_client.html' %}</div>
+
+
 <br>
-{% endfor %}
+
+<!-- конец блока добавления записи -->
+{% if clients %}
+    {% for client in clients %}
+
+        <!-- необходимые переменный для обработки формы по изменению конкретной записи-->
+        {% set form_id = client.Client.id %}
+        {% set id_message = "message_" + client.Client.id|string %}
+        {% set some_function = "updateClient(" + client.Client.id|string + ", message_" + client.Client.id|string + ")" %}
+        {% set label_form_name = "Редактировать клиента " + client.Client.name|string %}
+
+        <div class="notes">
+
+            <div id="TG" class="form-group row">
+                <label class="col-sm-2 col-form-label">TG ID:</label>
+                <div class="col-sm-8">
+                    <label id="client_tg_id" class="form-control-plaintext">{{ client.Client.tg_id }}</label>
+                </div>
+
+                <div class="col-right">
+                    <button onclick="editRecord({{ client.Client.id }})"
+                            class="btn btn-success" data-toggle="modal"
+                            data-target="#form{{ form_id }}">
+                        <span><i class="bi bi-tools"></i></span>
+                        <span class="btn-text text-default">Редактировать</span>
+                    </button>
+
+                    <button class="btn btn-danger" data-toggle="modal"
+                            data-target="#form-delete{{ form_id }}">
+                        <span><i class="bi bi-trash3-fill"></i></span>
+                        <span class="btn-text text-default">Удалить</span>
+                    </button>
+                </div>
+            </div>
+
+            <div> {% include 'delete_client.html' %} </div>
+
+
+            <div> {% include 'create_client.html' %} </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">TG ссылка:</label>
+                <div class="col-sm-10">
+                    <label class="form-control-plaintext">{{ client.Client.tg_link }}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Имя:</label>
+                <div class="col-sm-10">
+                    <label class="form-control-plaintext">{{ client.Client.name }}</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Период инвестирования:</label>
+                <div class="col-sm-10">
+                    <label class="form-control-plaintext">{{ client.Client.investment_time }}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Инвестиционный инструменты:</label>
+                <div class="col-sm-10">
+                    <label class="form-control-plaintext">{{ client.Client.investment_tools }}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Сумма инвестирования в мес:</label>
+                <div class="col-sm-10">
+                    <label class="form-control-plaintext">{{ client.Client.investment_amount }}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Когда удобно встретиться:</label>
+                <div class="col-sm-10">
+                    <label class="form-control-plaintext">{{ client.Client.meeting }}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Мобильный номер:</label>
+                <div class="col-sm-10">
+                    <label class="form-control-plaintext">{{ client.Client.contact_number }}</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Дата заполнения:</label>
+                <div class="col-sm-10">
+                    <label class="form-control-plaintext">{{ client.Client.registered_at.strftime('%Y-%m-%d %H:%M:%S')
+                        }}</label>
+
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Просмотрен:</label>
+                <div class="col-sm-10">
+                    <input type="checkbox" data-client-id="client-{{ client.Client.id }}"
+                           {% if client.Client.is_processed %} checked {% endif %}
+                           onchange="updateProcessed({{ client.Client.id }}, this.checked)"
+                           id="is_processed_{{ client.Client.id }}" class="check_test">
+                    <label for="is_processed_{{ client.Client.id }}" data-onlabel="Да" data-offlabel="Нет" class="lb1"></label>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    {% endfor %}
 {% else %}
-<h1>У вас нет записей!</h1>
-<br>
+    <h1>У вас нет записей!</h1>
+    <br>
 {% endif %}
 <!-- Оформление кнопок пагинации -->
 
@@ -110,7 +163,8 @@
     {% for p in range((page-2, 2)|max, (page+3, max_page)|min) %}
 
     <a href="?page={{ p }}">
-        <button name="paginator-page" class="btn btn-gradient-primary btn-lg btn-block{% if p == page %} active{% endif %}">
+        <button name="paginator-page"
+                class="btn btn-gradient-primary btn-lg btn-block{% if p == page %} active{% endif %}">
             <span class="btn-text text-default">{{ p }}</span>
         </button>
     </a>
@@ -137,30 +191,11 @@
 
 </div>
 <br>
-<script>
-    function updateProcessed(clientId, isChecked) {
-        fetch(`/api/v1/clients/${clientId}/processed`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                is_processed: isChecked
-            })
-        })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error(error));
-    }
 
 
-
-
-
-
-
-
-</script>
-
+<script src="{{ url_for('static', path='js/update_client.js') }}"></script>
+<script src="{{ url_for('static', path='js/is_processed_flag.js') }}"></script>
+<script src="{{ url_for('static', path='js/create_client.js') }}"></script>
+<script src="{{ url_for('static', path='js/delete_client.js') }}"></script>
 
 {% endblock %}

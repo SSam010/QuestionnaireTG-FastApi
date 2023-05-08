@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="{{ url_for('static', path='css/main.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', path='image/mda.jpg') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -14,13 +15,28 @@
     <img src="{{ url_for('static', path='image/mda.jpg') }}" alt="logo">
     <span class="logo">Sam-IT</span>
     <ul>
-        <a href="/pages/clients">
+        <a href="/clients">
             <li><i class="bi bi-house-door-fill"></i> Все записи</li>
         </a>
-        <a href="/pages/clients/not_processed">
+        <a href="/clients/not_processed">
             <li><i class="bi bi-universal-access"></i> Непросмотренные</li>
         </a>
     </ul>
+
+    <div class='login-logout'>
+        {% if user %}
+        <h5>Вы вошли как {{ user.username }}</h5>
+        <form id="logout-form" action="/auth/jwt/logout" method="post">
+            <button class="btn btn-danger" type="submit">Выйти</button>
+            <script src="{{ url_for('static', path='js/logout.js') }}"></script>
+        </form>
+
+        {%else%}
+        <a href="/auth">Войти</a>
+
+        {% endif %}
+
+    </div>
 </aside>
 <main>
     {% block content %}

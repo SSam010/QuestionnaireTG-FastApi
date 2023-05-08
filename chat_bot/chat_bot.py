@@ -1,3 +1,9 @@
+import os
+import sys
+
+
+sys.path.append(os.path.join(sys.path[0], '/usr/src/questionnaire/website'))
+
 import asyncio
 import logging
 
@@ -8,9 +14,9 @@ from telegram import __version__ as TG_VER
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
 from telegram.ext import ConversationHandler
 
-from website.config import TOKEN, OWNER_ID
-from website.database import async_session_maker
 from clients.models import Client
+from config import TOKEN, OWNER_ID
+from database import async_session_maker
 
 try:
     from telegram import __version_info__
@@ -180,7 +186,7 @@ async def contact_number(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         logger.info(f"ОШИБКА! Запись пользователя {user.name} id {user.id} не была добавлена в базу\n"
                     f"ошибка: {some_error}")
 
-        await send_notification_to_admin(success=False,  user=user, context=context)
+        await send_notification_to_admin(success=False, user=user, context=context)
 
     finally:
         context.user_data.clear()
@@ -206,7 +212,7 @@ async def add_client_data_to_db(context: ContextTypes.DEFAULT_TYPE, user: telegr
 
 
 async def send_notification_to_admin(success: bool, user: telegram._user.User,
-                            context: ContextTypes.DEFAULT_TYPE, OWNER_ID: int = OWNER_ID):
+                                     context: ContextTypes.DEFAULT_TYPE, OWNER_ID: int = OWNER_ID):
     """Отправка сообщения владельцу о том, что кто-то заполнил данные"""
 
     data_user_text = f"Данные пользователя:\n" \

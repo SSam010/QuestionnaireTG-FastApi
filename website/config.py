@@ -4,16 +4,14 @@ import os
 
 load_dotenv()
 
-DB_HOST = os.environ.get("DB_HOST")
-DB_PORT = os.environ.get("DB_PORT")
-DB_NAME = os.environ.get("DB_NAME")
-DB_USER = os.environ.get("DB_USER")
-DB_PASSWORD = os.environ.get("DB_PASSWORD")
-
-TOKEN = os.environ.get("TOKEN")
-OWNER_ID = os.environ.get("OWNER_ID")
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST")
+POSTGRES_PORT = os.environ.get("POSTGRES_PORT")
+POSTGRES_DB = os.environ.get("POSTGRES_DB")
+POSTGRES_USER = os.environ.get("POSTGRES_USER")
+POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD")
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
-
+TOKEN = os.environ.get("TOKEN")
+OWNER_ID = os.environ.get("OWNER_ID")

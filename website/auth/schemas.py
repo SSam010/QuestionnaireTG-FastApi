@@ -2,10 +2,12 @@ import uuid
 from typing import Optional
 
 from fastapi_users import schemas
+from fastapi_users_db_sqlalchemy import UUID_ID
+from sqlalchemy import UUID
 
 
 class UserRead(schemas.BaseUser[uuid.UUID]):
-    id: int
+    id: UUID_ID
     username: str
     email: str
     is_active: Optional[bool] = True

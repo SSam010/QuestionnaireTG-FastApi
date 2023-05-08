@@ -1,8 +1,6 @@
 import os
 import sys
 
-
-sys.path.append(os.path.join(sys.path[0], 'chat_bot'))
 sys.path.append(os.path.join(sys.path[0], 'website'))
 
 from logging.config import fileConfig
@@ -11,7 +9,8 @@ from alembic import context
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
-from config import DB_PASSWORD, DB_HOST, DB_USER, DB_NAME, DB_PORT
+from config import POSTGRES_DB, POSTGRES_PORT, POSTGRES_HOST, \
+    POSTGRES_PASSWORD, POSTGRES_USER
 from database import Base
 from clients.models import Client
 from auth.models import User
@@ -20,11 +19,11 @@ from auth.models import User
 config = context.config
 
 section = config.config_ini_section
-config.set_section_option(section, "DB_PASSWORD", DB_PASSWORD)
-config.set_section_option(section, "DB_HOST", DB_HOST)
-config.set_section_option(section, "DB_USER", DB_USER)
-config.set_section_option(section, "DB_NAME", DB_NAME)
-config.set_section_option(section, "DB_PORT", DB_PORT)
+config.set_section_option(section, "POSTGRES_PASSWORD", POSTGRES_PASSWORD)
+config.set_section_option(section, "POSTGRES_HOST", POSTGRES_HOST)
+config.set_section_option(section, "POSTGRES_USER", POSTGRES_USER)
+config.set_section_option(section, "POSTGRES_DB", POSTGRES_DB)
+config.set_section_option(section, "POSTGRES_PORT", POSTGRES_PORT)
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
@@ -35,7 +34,7 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = [Base.metadata]
+target_metadata = [Base.metadata, ]
 
 
 # other values from the config, defined by the needs of env.py,
@@ -83,7 +82,7 @@ def run_migrations_online() -> None:
 
     with connectable.connect() as connection:
         context.configure(
-            connection=connection, target_metadata=target_metadata
+            connection=connection, target_metadata=target_metadata, compare_type=True,
         )
 
         with context.begin_transaction():

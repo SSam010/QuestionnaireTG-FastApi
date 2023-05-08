@@ -1,10 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Авторизация</title>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/auth.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', path='image/mda.jpg') }}">
 </head>
+
 <body>
+<div class="overlay">
+    <form id="login-user">
+        <!--   con = Container  for items in the form-->
+        <div class="con">
+            <!--     Start  header Content  -->
+            <header class="head-form">
+                <h2>Вход</h2>
+                <!--     A welcome message or an explanation of the login form -->
+                <p>Войдите, используя ваш логин и пароль</p>
+            </header>
+            <!--     End  header Content  -->
+            <br>
+            <div class="field-set">
+
+                <!--   user name -->
+                <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+                <!--   user name Input-->
+                <input class="form-input" type="text" name="username" placeholder="Логин" required>
+
+                <br>
+
+                <!--   Password -->
+
+                <span class="input-item">
+        <i class="fa fa-key"></i>
+       </span>
+                <!--   Password Input-->
+                <input class="form-input" type="password" placeholder="Пароль" name="password" required>
+
+                <!--      Show/hide password  -->
+                <span>
+        <i class="fa fa-eye" aria-hidden="true" type="button" id="eye"></i>
+     </span>
+
+
+                <br>
+                <!--        buttons -->
+                <!--      button LogIn -->
+                <button id="log-in" type="submit" class="log-in">Войти</button>
+            </div>
+
+            <!--   other buttons -->
+            <div class="other">
+                <!--      Forgot Password button-->
+                <button class="btn submits frgt-pass">Забыли пароль? (пока не работает)</button>
+                <!--     Sign Up button -->
+                <button class="btn submits sign-up">Регистрация (пока не работает)
+                    <!--         Sign Up font icon -->
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                </button>
+                <!--      End Other the Division -->
+            </div>
+
+            <!--   End Conrainer  -->
+        </div>
+
+        <!-- End Form -->
+    </form>
+</div>
+<script src="{{ url_for('static', path='js/auth.js') }}"></script>
 
 </body>
 </html>

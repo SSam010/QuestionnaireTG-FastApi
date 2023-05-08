@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15
+    container_name: db_app
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdb:/var/lib/postgresql/data/
+
+  app:
+    build:
+      context: .
+    env_file:
+      - .env
+    container_name: web_server
+    command: ["/questionnaire/docker/app.sh"]
+    ports:
+      - 9999:8000
+    depends_on:
+      - db
+    volumes:
+      - .:/usr/src/questionnaire
+
+  tg_bot:
+    build:
+      context: .
+    container_name: tg_bot
+    env_file:
+      - .env
+    command: ["/questionnaire/docker/tg_bot.sh"]
+    depends_on:
+      - db
+      - app
+    volumes:
+      - .:/usr/src/questionnaire
+
+volumes:
+  pgdb:
+

@@ -1,0 +1,23 @@
+<div class="modal fade" id="form-delete{{ form_id }}" tabindex="-1" role="dialog">
+
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Подтвердите удаление</label>
+                        <div class="col-sm-8">
+                            <input type="submit"
+                                   onclick="deleteClient({{ client.Client.id }}, delete-{{ client.Client.id }})"
+                                   value="Тык" class="btn btn-gradient-primary btn-block btn-lg">
+                            <div class="col-sm-4 col-form-label" id="delete-{{ id_message }}"></div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

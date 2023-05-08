@@ -2,13 +2,15 @@ from math import ceil
 
 import sqlalchemy
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import select, update, insert, asc
+from sqlalchemy import select, update, insert, asc, delete
 from sqlalchemy.ext.asyncio import AsyncSession
 
+
 from clients.models import Client
-from clients.schemas import ClientCreate, ClientUpdate, ClientUpdateProcessed
+from clients.schemas import ClientCreate, ClientUpdateProcessed
 from database import get_async_session
 from logger import logger
+
 
 router = APIRouter(
     prefix="/api/v1/clients",
@@ -109,7 +111,7 @@ async def add_new_client(new_client: ClientCreate, session: AsyncSession = Depen
 
 # Change client's data
 @router.put("/{client_id}")
-async def update_client(client_id: int, change_client: ClientUpdate,
+async def update_client(client_id: int, change_client: ClientCreate,
                         session: AsyncSession = Depends(get_async_session)):
     try:
         stmt = update(Client).where(Client.id == client_id).values(**change_client.dict())
@@ -123,6 +125,51 @@ async def update_client(client_id: int, change_client: ClientUpdate,
 
     except Exception as e:
         logger.error(f"При изменении записи клиента id{client_id} произошла ошибка\n{e}")
+        raise HTTPException(status_code=500, detail={
+            "status": "error",
+            "data": None,
+            "details": None
+        })
+
+
+# Delete client's data
+@router.delete("/{client_id}")
+async def delete_client(client_id: int,
+                        session: AsyncSession = Depends(get_async_session)):
+    try:
+        stmt = delete(Client).where(Client.id == client_id)
+        await session.execute(stmt)
+        await session.commit()
+        return {
+            "status": "delete completed",
+            "data": None,
+            "details": None
+        }
+
+    except Exception as e:
+        logger.error(f"При удалении записи клиента id{client_id} произошла ошибка\n{e}")
+        raise HTTPException(status_code=500, detail={
+            "status": "error",
+            "data": None,
+            "details": None
+        })
+
+
+@router.get("/{client_id}")
+async def get_one_client(client_id: int,
+                         session: AsyncSession = Depends(get_async_session)):
+    try:
+        query = select(Client).where(Client.id == client_id)
+        result = await session.execute(query)
+        data = list(result.mappings())
+        return {
+            "status": "success",
+            "data": data,
+            "details": None
+        }
+
+    except Exception as e:
+        logger.error(f"При получении записи клиента id{client_id} произошла ошибка\n{e}")
         raise HTTPException(status_code=500, detail={
             "status": "error",
             "data": None,
