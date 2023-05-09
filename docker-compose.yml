@@ -17,13 +17,13 @@ services:
     env_file:
       - .env
     container_name: web_server
-    command: ["/questionnaire/docker/app.sh"]
+    command: ["./docker/app.sh"]
     ports:
       - 9999:8000
     depends_on:
       - db
     volumes:
-      - .:/usr/src/questionnaire
+      - ./website:/usr/src/quest/website
 
   tg_bot:
     build:
@@ -31,13 +31,14 @@ services:
     container_name: tg_bot
     env_file:
       - .env
-    command: ["/questionnaire/docker/tg_bot.sh"]
+    command: ["./docker/tg_bot.sh"]
     depends_on:
       - db
       - app
     volumes:
-      - .:/usr/src/questionnaire
+      - ./chat_bot:/usr/src/quest/chat_bot
 
 volumes:
   pgdb:
-
+  website:
+  chat_bot:

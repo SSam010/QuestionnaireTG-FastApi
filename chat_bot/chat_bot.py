@@ -2,7 +2,7 @@ import os
 import sys
 
 
-sys.path.append(os.path.join(sys.path[0], '/usr/src/questionnaire/website'))
+sys.path.append(os.path.join(sys.path[0], '/usr/src/quest/website'))
 
 import asyncio
 import logging

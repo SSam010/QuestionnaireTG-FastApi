@@ -1,8 +1,6 @@
 FROM python:3.11
 
-RUN mkdir /questionnaire
-
-WORKDIR /questionnaire
+WORKDIR /usr/src/quest
 
 COPY requirements.txt .
 

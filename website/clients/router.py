@@ -20,7 +20,7 @@ router = APIRouter(
 
 def paginator(result_execute: sqlalchemy.engine.result.ChunkedIteratorResult, page: int, limit: int):
     # Получаем список записей из запроса
-    data = list(result_execute.mappings())
+    data = result_execute.mappings().all()
     # Отдаем записи с соответствующим смещением и лимитом
     clients = data[(page - 1) * limit:][:limit]
     # Проверяем, есть ли еще записи
@@ -197,3 +197,5 @@ async def update_client_processed(client_id: int, is_processed: ClientUpdateProc
             "data": None,
             "details": None
         })
+
+

@@ -11,7 +11,8 @@ from clients.router import router as router_clients
 from logger import logger
 from pages.router import router as router_pages
 
-app = FastAPI(title="Финансовый финанс")
+app = FastAPI(title="Финансовый финанс", docs_url=None, redoc_url=None)
+# app = FastAPI(title="Отладка")
 
 app.include_router(router_clients)
 app.include_router(router_pages)
